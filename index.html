@@ -14,7 +14,7 @@
         for (let i = 0; i < select_elem.value; i++) {
           kinder_elems.innerHTML += `
           <div class="form-floating mb-3">
-            <input required type="number" class="form-control" id="alterKind` + i + `" >
+            <input required type="number" class="form-control" id="alterKind` + i + `" value=` + (Math.floor(Math.random() * 17) + 1) + ` >
             <label for="floatingInput">Alter des ` + (i + 1) + `. Kindes</label>
           </div>
           `
@@ -98,11 +98,6 @@
       }
 
       function set_init(){
-        let num_kinder = document.getElementById("floatingSelect").value;
-        for(let i = 0; i < num_kinder; i++){
-          document.getElementById("alterKind" + i).value = Math.floor(Math.random() * 17) + 1;
-        }
-
         var bMobile =   // will be true if running on a mobile device
         navigator.userAgent.indexOf("Mobile") !== -1 ||
         navigator.userAgent.indexOf("iPhone") !== -1 ||

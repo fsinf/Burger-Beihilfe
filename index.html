@@ -15,7 +15,7 @@
         for (let i = 0; i < select_elem.value; i++) {
           kinder_elems.innerHTML += `
           <div class="form-floating mb-3">
-            <input required type="number" class="form-control" id="alterKind` + i + `" value=` + (Math.floor(Math.random() * 17) + 1) + ` >
+            <input required type="number" class="form-control" id="alterKind` + i + `" value=` + (Math.floor(Math.random() * 17) + 1) + ` min="0">
             <label for="floatingInput">Alter des ` + (i + 1) + `. Kindes</label>
           </div>
           `
